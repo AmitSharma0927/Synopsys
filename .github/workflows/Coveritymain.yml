@@ -24,7 +24,7 @@ jobs:
       COV_URL: ${{ secrets.COV_URL }}
       COV_USER: ${{ secrets.COV_USER }}
       COVERITY_PASSPHRASE: ${{ secrets.COVERITY_PASSPHRASE }}
-      CSA: cov-analysis-linux64-2021.9.0
+     # CSA: cov-analysis-linux64-2021.9.0
       COVERITY_PROJECT: java-sec-code
       BLDCMD: mvn clean package -DskipTests
       CHECKERS: --webapp-security
@@ -35,8 +35,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Maven Build
-        run: mvn clean package -DskipTests
+     # - name: Maven Build
+      #  run: mvn clean package -DskipTests
         
       - name: Install SAST Full Scan
         run: |
